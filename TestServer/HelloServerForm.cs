@@ -37,7 +37,7 @@ namespace TestServer
 
         private void instanceHelloRemote_Say(string value)
         {
-            Invoke(new SetSayDelegate(Say));
+            Invoke(new SetSayDelegate(Say), new object[]{ value});
         }
 
         private delegate void SetSayDelegate(string value);
